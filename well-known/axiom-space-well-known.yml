@@ -1,0 +1,37 @@
+generated: '2026-07-31'
+method: probed
+source: live probes of Axiom Space hosts
+note: >-
+  Probed the standard /.well-known/ discovery surface across every Axiom Space host
+  reachable from apis.yml. Axiom Space operates no API host — api.axiomspace.com,
+  developer.axiomspace.com and docs.axiomspace.com do not resolve — so only the
+  marketing/corporate site was probeable. Nothing returned 200. Recorded here as
+  honest negative results. No WellKnown or SecurityTxt pointer is emitted because
+  nothing was found.
+hosts:
+- host: https://www.axiomspace.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://axiomspace.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+unreachable_hosts:
+- {host: https://api.axiomspace.com, status: dns-no-resolve}
+- {host: https://developer.axiomspace.com, status: dns-no-resolve}
+- {host: https://docs.axiomspace.com, status: dns-no-resolve}
+- {host: https://trust.axiomspace.com, status: dns-no-resolve}
+- {host: https://security.axiomspace.com, status: dns-no-resolve}
+- {host: https://status.axiomspace.com, status: dns-no-resolve}
