@@ -1,17 +1,61 @@
 aid: axiom-space
 name: Axiom Space
-description: 'Axiom Space is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Axiom Space, Inc. is a privately funded American space infrastructure developer
+  headquartered in Houston, Texas, founded in 2016 by Kam Ghaffarian and former NASA
+  International Space Station Program Manager Michael Suffredini. The company is
+  building Axiom Station, the world's first commercial space station and planned
+  successor to the ISS, and has flown private astronaut missions to the ISS (Ax-1
+  through Ax-4). Axiom Space also develops the Axiom Extravehicular Mobility Unit
+  (AxEMU) spacesuit for NASA's return to the lunar surface, and sells human
+  spaceflight, microgravity research, in-space manufacturing, and Orbital Data Center
+  services (in-orbit cloud compute, with the ODC T1 node built alongside Kepler
+  Communications and Skyloom Global). As of this enrichment pass Axiom Space publishes
+  no public developer API, SDK, developer portal, or machine-readable API contract —
+  every offering is transacted through direct enterprise, agency, and government
+  engagement, and its only public code presence is a two-repository GitHub
+  organization holding forks of NASA simulation software (Trick and GUNNS).
 url: https://raw.githubusercontent.com/api-evangelist/axiom-space/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
 x-tier-reason: harvest
+x-api-surface: none
+x-secondary-market: https://forgeglobal.com/axiom-space_stock/
+x-contract-discovery:
+  date: '2026-07-31'
+  result: no-machine-readable-contract
+  probed_hosts:
+  - www.axiomspace.com
+  - axiomspace.com
+  - api.axiomspace.com (dns-no-resolve)
+  - developer.axiomspace.com (dns-no-resolve)
+  - docs.axiomspace.com (dns-no-resolve)
+  probes:
+  - {kind: openapi, paths: [/openapi.json, /openapi.yaml, /swagger.json, /v1/openapi.json, /api-docs, /docs, /redoc], result: 404-or-no-host}
+  - {kind: graphql, result: no-graphql-endpoint-found}
+  - {kind: mcp, result: no-mcp-server-published}
+  - {kind: a2a-agent-card, paths: [/.well-known/agent-card.json, /.well-known/agent.json], result: 404}
+  - {kind: asyncapi-webhooks, result: no-event-or-webhook-surface-documented}
+  - {kind: packages, registries: [npm, pypi, maven-central, nuget, pkg.go.dev, rubygems, packagist, crates.io], result: no-first-party-client-libraries}
+  - {kind: github-org, url: 'https://github.com/Axiom-Space', result: '2 public repos, both forks of NASA simulation software (Trick, GUNNS) - not client libraries'}
 specificationVersion: '0.20'
 created: '2026-07-31'
 modified: '2026-07-31'
+image: https://cdn.prod.website-files.com/671fb31e0ed79c76c93e0fee/6761f94d1b74000fa9879891_61d17a8731355047a7541bab06bd8c50_AxStation_OpenGraph.webp
 tags:
 - Company
+- Aerospace
+- Space
+- Commercial Spaceflight
+- Space Station
+- Human Spaceflight
+- Microgravity Research
+- In-Space Manufacturing
+- Spacesuits
+- Orbital Data Center
+- Edge Computing
+- Government Contractor
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +64,39 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://forgeglobal.com/axiom-space_stock/
+  url: https://www.axiomspace.com/
+- type: GitHubOrganization
+  url: https://github.com/Axiom-Space
+- type: Blog
+  url: https://www.axiomspace.com/newsroom
+- type: Newsroom
+  url: https://www.axiomspace.com/newsroom
+- type: PressReleases
+  url: https://www.axiomspace.com/archive/releases
+- type: Newsletter
+  url: https://www.axiomspace.com/connect
+- type: Careers
+  url: https://www.axiomspace.com/careers
+- type: Partners
+  url: https://www.axiomspace.com/partners
+- type: Team
+  url: https://www.axiomspace.com/team
+- type: CodeOfConduct
+  url: https://www.axiomspace.com/compliance
+- type: TermsOfService
+  url: https://www.axiomspace.com/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.axiomspace.com/privacy-policy
+- type: AcceptableUsePolicy
+  url: https://www.axiomspace.com/acceptable-use-policy
+- type: Legal
+  url: https://www.axiomspace.com/cookie-policy
+- type: DomainSecurity
+  url: security/axiom-space-domain-security.yml
+- type: LLMsTxt
+  url: llms/axiom-space-llms.txt
+x-enrichment:
+  date: '2026-07-31'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
