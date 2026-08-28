@@ -39,6 +39,17 @@ x-contract-discovery:
   - {kind: asyncapi-webhooks, result: no-event-or-webhook-surface-documented}
   - {kind: packages, registries: [npm, pypi, maven-central, nuget, pkg.go.dev, rubygems, packagist, crates.io], result: no-first-party-client-libraries}
   - {kind: github-org, url: 'https://github.com/Axiom-Space', result: '2 public repos, both forks of NASA simulation software (Trick, GUNNS) - not client libraries'}
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 specificationVersion: '0.23'
 created: '2026-07-31'
 modified: '2026-07-31'
